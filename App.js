@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet,Linking, Text, View, Image, Button } from 'react-native';
+import { StyleSheet,Linking, Text, View, Image, Button, TextInput } from 'react-native';
 
 export default function App() {
   const titleText="Welcome to CybersolX";
@@ -20,13 +20,14 @@ export default function App() {
         {"\n"}
         or{"\n"} click the Button below to Visit us{"\n"}
         </Text>
-
         <Button
           style={styles.button}
           title="Visit Us"
           onPress={()=>Linking.openURL('http://www.cybersolx.com')}    
         />
-
+        {"\n"}
+        
+        {/* <Text>{showName()}</Text> */}
       <StatusBar style="auto" />
       </View>
       
@@ -34,18 +35,27 @@ export default function App() {
   );
 }
 
+// const showName =()=>{
+//   return "Asif Ali 004"
+// }
 
 const styles = StyleSheet.create({
-  button:{
-    padding:20
+  Heading:{
+    fontSize:30,
+    fontWeight:700,
+    
   },
+  // button:{
+  //   backgroundColor:'purple'
+  // },
   subtext:{
     textAlign:'center',
-    paddingBottom:10
+    paddingBottom:10,
+    color:'blue'
   },
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'white',
     alignItems: 'center',
     justifyContent: 'center',
   },
